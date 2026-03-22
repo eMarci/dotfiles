@@ -1,6 +1,4 @@
-#!/bin/bash
-
-alias lzd='~/.local/bin/lazydocker'
-alias reload="source ~/.bashrc && echo \"Reloaded ~/.bashrc\""
-alias l='ls -lah --color=auto'
-
+alias '?'='type -a'
+alias l='eza --icons=always --all --long --group-directories-last --binary --smart-group --header --octal-permissions --no-time'
+alias lp='l --color=always | fzf'
+alias grep='rg --color=auto'
