@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+qpath() {
+	if [[ -t 1 ]]; then
+		echo $PATH | tr ':' $'\n' | fzf
+		return 0
+	fi
+
+	echo $PATH | tr ':' $'\n'
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+alias lzd='~/.local/bin/lazydocker'
+alias reload="source ~/.bashrc && echo \"Reloaded ~/.bashrc\""
+alias l='ls -lah --color=auto'
+
