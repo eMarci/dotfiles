@@ -106,8 +106,8 @@ fi
 # ==== Exports ====
 export EDITOR='vim'
 export VISUAL='vim'
-export PAGER='less'
-# =================
+export PAGER='less --use-color -R'
+# ================
 
 # Configure chezmoi
 eval "$(~/.local/bin/chezmoi completion bash)"
