@@ -11,16 +11,6 @@ check() {
     # Check version
 }
 
-# Prepare necessary directories
-# ~/.local
-# ├── bin
-# └── share
-#     ├── bash-completion
-#     │   └── completions
-#     └── man
-#         └── man1
-mkdir -p ~/.local/{bin,share/{bash-completion/completions,man/man1}}
-
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
 trap "rm -rf $TEMP_WORKDIR" EXIT
