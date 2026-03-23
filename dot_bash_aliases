@@ -1,5 +1,5 @@
 alias '?'='type -a'
 alias l='eza --icons=always --all --long --group-directories-last --binary --smart-group --header --octal-permissions --no-time'
-alias lp='l --color=always | fzf'
+alias lp='eza --icons=always --all --long --group-directories-last --binary --smart-group --octal-permissions --no-time --color=always | fzf --ansi'
 alias grep='rg --color=auto'
 alias dash='gh dash'
