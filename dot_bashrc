@@ -36,14 +36,14 @@ if ! shopt -oq posix; then
 fi
 
 # Run any local startup scripts
-if [[ -d "~/.bashrc.d" ]]; then
+if [[ -d ~/.bashrc.d ]]; then
     for F in ~/.bashrc.d/*; do
         [[ -x $F ]] && "$F"
     done
 fi
 
 # Source any function declarations
-if [[ -d "~/.functions" ]]; then
+if [[ -d ~/.functions ]]; then
     for F in ~/.functions/*; do
         [[ -r $F ]] && source "$F"
     done
