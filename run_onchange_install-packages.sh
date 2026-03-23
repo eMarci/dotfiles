@@ -28,7 +28,7 @@ trap "rm -rf $TEMP_WORKDIR" EXIT
 # Install sharkdp/bat
 # https://github.com/sharkdp/bat
 curl -o "${TEMP_WORKDIR}/bat.tar.gz" -L "${BAT_DOWNLOAD_URL?}"
-tar xf "${TEMP_WORKDIR}/bat.tar.gz" --strip-components=1
+tar xf "${TEMP_WORKDIR}/bat.tar.gz" --strip-components=1 -C "${TEMP_WORKDIR}"
 mv "${TEMP_WORKDIR}/bat" ~/.local/bin
 mv "${TEMP_WORKDIR}/bat.1" ~/.local/share/man/man1
 mv "${TEMP_WORKDIR}/autocomplete/bat.bash" ~/.local/share/bash-completion/completions
