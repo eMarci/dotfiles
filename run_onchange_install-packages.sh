@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 check() {
     local PROGRAM="$1"
     
