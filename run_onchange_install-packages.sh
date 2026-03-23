@@ -25,7 +25,7 @@ trap "rm -rf $TEMP_WORKDIR" EXIT
 
 # Install sharkdp/bat
 # https://github.com/sharkdp/bat
-curl -o "${TEMP_WORKDIR}/bat.tar.gz" -L "$BAT_DOWNLOAD_URL"
+curl -o "${TEMP_WORKDIR}/bat.tar.gz" -L "${BAT_DOWNLOAD_URL?}"
 tar xf --strip-components=1 "${TEMP_WORKDIR}/bat.tar.gz"
 mv "${TEMP_WORKDIR}/bat" ~/.local/bin
 mv "${TEMP_WORKDIR}/bat.1" ~/.local/share/man/man1
