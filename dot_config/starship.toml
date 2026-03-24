@@ -1,0 +1,72 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "nord"
+
+# FORMAT
+# ─ The first rounded opener uses the user section color as bg.
+# ─ Each arrow [] has fg = previous section bg, bg = next section bg.
+format = """\
+$status\
+$username\
+[](fg:color_user bg:color_dir)\
+$directory\
+[](fg:color_dir bg:color_git)\
+$git_branch\
+$git_commit\
+[ ](fg:color_git)\
+"""
+
+# MODULES
+# ──────────────────────────────────────────────────────────────
+
+[status]
+format = '[]($style bg:none)[\($status\) ]($style fg:#ECEFF4)[]($style bg:color_user)'
+success_symbol = " "
+success_style = "fg:color_status_success bg:color_status_success"
+failure_style = "fg:color_status_fail bg:color_status_fail"
+disabled = false
+
+[username]
+show_always = true
+# Section background is the variable; text uses white for contrast.
+style_user = "bg:color_user fg:white"
+style_root = "bg:color_user fg:white"
+format = '[ $user ]($style)'
+disabled = false
+
+[directory]
+style = "bg:color_dir fg:color_dir_text"
+format = "[ $path ]($style)"
+truncation_length = 8
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+style = "bg:color_git fg:color_git_text"
+format = '[ $symbol $branch ]($style)'
+truncation_length = 30
+only_attached = true
+
+[git_commit]
+style = "bg:color_git fg:color_git_text"
+format = '[ @ commit: $hash ]($style)'
+only_detached = true
+
+
+# PALETTES
+# ──────────────────────────────────────────────────────────────
+# Only section colors are declared. Separators use these automatically
+# via fg/bg in the format above.
+
+# Nord (calm nordic)
+[palettes.nord]
+color_status_success    = "#343945"
+color_status_fail       = "#A5545B"
+color_exit              = "#BF616A"
+color_exit_text         = "#06090D"
+color_user              = "#4C566A"
+color_dir               = "#5E81AC"
+color_dir_text          = "#03060B"
+color_git               = "#81A1C1"
+color_git_text          = "#06090D"
