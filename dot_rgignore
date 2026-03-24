@@ -2,3 +2,6 @@
 .vscode-server
 .vscode-remote-containers
 .cursor-server
+.docker/buildx
+.cache
+node_modules
