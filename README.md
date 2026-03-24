@@ -23,3 +23,9 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin \
     && chezmoi init https://github.com/eMarci/dotfiles.git \
     && chezmoi apply
 ```
+
+### Caveats
+
+GitHub CLI unfortunately only allows interactive login without an access token.
+During interactive login, you may provide an access token or choose the browser login.
+Only after authentication succeeds can we install extensions, such as `gh-dash`.
