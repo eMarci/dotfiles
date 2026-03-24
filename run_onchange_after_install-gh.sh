@@ -19,5 +19,5 @@ mv "${TEMP_WORKDIR}/bin/gh" ~/.local/bin
 mv "${TEMP_WORKDIR}/share/man/man1"/* ~/.local/share/man/man1
 rm -rf "${TEMP_WORKDIR}"
 
-echo "Installed binary and man page"
+echo "Installed binary and man pages"
 echo
