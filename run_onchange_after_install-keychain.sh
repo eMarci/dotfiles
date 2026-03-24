@@ -9,4 +9,4 @@ MAN_DOWNLOAD_URL="https://github.com/danielrobbins/keychain/releases/download/2.
 # https://github.com/danielrobbins/keychain
 curl -o ~/.local/bin/keychain -L "${DOWNLOAD_URL?}"
 chmod +x ~/.local/bin/keychain
-curl -o ~/.local/share/man/man1 -L "${MAN_DOWNLOAD_URL?}"
+curl -o ~/.local/share/man/man1/keychain.1 -L "${MAN_DOWNLOAD_URL?}"
