@@ -12,7 +12,7 @@ echo "Installing danielrobbins/keychain ..."
 
 curl -o ~/.local/bin/keychain -L "${DOWNLOAD_URL?}"
 chmod +x ~/.local/bin/keychain
-curl -o ~/.local/share/man/man1/keychain.1 -L "${MAN_DOWNLOAD_URL?}"
+curl -o ~/.local/share/man/man1/keychain.1 -L "${MAN_PAGE_DOWNLOAD_URL?}"
 
 echo "Installed binary and man page"
 echo
