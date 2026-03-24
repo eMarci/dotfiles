@@ -82,3 +82,6 @@ eval "$(~/.local/bin/keychain --eval ~/.ssh/identities/**/*.key)"
 # Start starship
 eval "$(~/.local/bin/starship init bash)"
 eval "$(~/.local/bin/starship completions bash)"
+
+# Configure GitHub CLI
+eval "$(~/.local/bin/gh completion -s bash)"
