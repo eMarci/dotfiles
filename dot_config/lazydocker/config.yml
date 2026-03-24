@@ -1,0 +1,21 @@
+os:
+  browser: "wslview"
+gui:
+  returnImmediately: true
+  containerStatusHealthStyle: icon
+customCommands:
+  containers:
+    - name: fzf logs
+      shell: true
+      attach: true
+      command: 'docker logs {{ .Container.ID }} 2>&1 | fzf --ansi'
+  images:
+    - name: inspect
+      shell: true
+      attach: true
+      command: 'docker inspect {{ .Image.ID }} | $PAGER'
+  volumes:
+    - name: browse content
+      shell: true
+      attach: true
+      command: 'docker run --rm -it -v "{{ .Volume.Name }}:/data" martonendredi/nnn-explorer:latest -dHiU /data'
