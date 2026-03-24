@@ -55,8 +55,14 @@ export VISUAL='vim'
 export PAGER='less --use-color -R'
 # ================
 
+# Configure bat
+eval "$(~/.local/bin/bat --completion bash)"
+
 # Configure chezmoi
 eval "$(~/.local/bin/chezmoi completion bash)"
+
+# Configure rg
+eval "$(~/.local/bin/rg --generate=complete-bash)"
 
 # Configure fzf
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git" --no-ignore-vcs'
