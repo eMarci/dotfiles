@@ -46,11 +46,10 @@ if [[ -d ~/.functions ]]; then
     done
 fi
 
-# ==== Exports ====
+# Exports
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less --use-color -R'
-# ================
 
 # Configure bat
 eval "$(~/.local/bin/bat --completion bash)"
@@ -72,6 +71,7 @@ export FZF_CTRL_T_OPTS="
 export FZF_ALT_C_COMMAND='fd --type d --hidden'
 
 eval "$(~/.local/bin/fzf --bash)"
+# /Configure fzf
 
 # Configure keychain
 eval "$(~/.local/bin/keychain --eval ~/.ssh/identities/**/*.key)"
