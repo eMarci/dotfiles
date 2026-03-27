@@ -10,7 +10,7 @@ simply because I like to have control over what exactly gets installed (unless I
 I also put all of my user-specific installations in `~/.local/`. That means that all completions, man pages,
 and the binaries themselves all live in this directory.
 
-This code block contains everythign you need to install these dotfiles:
+This code block contains everything you need to install these dotfiles:
 
 ### Prerequisites
 
