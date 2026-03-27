@@ -1,3 +1,7 @@
 set number
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
 autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab smarttab
 autocmd FileType sh setlocal shiftwidth=4 softtabstop=4 expandtab smarttab
