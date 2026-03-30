@@ -21,17 +21,6 @@ if [[ -f ~/.bash_aliases ]]; then
     . ~/.bash_aliases
 fi
 
-# Enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-    if [[ -f /usr/share/bash-completion/bash_completion ]]; then
-        . /usr/share/bash-completion/bash_completion
-    elif [[ -f /etc/bash_completion ]]; then
-        . /etc/bash_completion
-    fi
-fi
-
 # Run any local startup scripts
 if [[ -d ~/.bashrc.d ]]; then
     for F in ~/.bashrc.d/*; do
@@ -80,3 +69,18 @@ eval "$(~/.local/bin/starship completions bash)"
 
 # Configure GitHub CLI
 eval "$(~/.local/bin/gh completion -s bash)"
+
+# Enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+    if [[ -f /usr/share/bash-completion/bash_completion ]]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [[ -f /etc/bash_completion ]]; then
+        . /etc/bash_completion
+    fi
+
+    for F in ~/.local/share/bash-completion/completions/*; do
+        [[ -r $F ]] && source "$F"
+    done
+fi
