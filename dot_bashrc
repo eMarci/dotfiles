@@ -71,23 +71,24 @@ eval "$(~/.local/bin/starship completions bash)"
 eval "$(~/.local/bin/gh completion -s bash)"
 
 # Configure eza
-join() {
-    IFS='|'
-    echo "$*"
-}
+export EZA_TREE_IGNORE_GLOB=$(
+    join() {
+        IFS='|'
+        echo "$*"
+    }
 
-eza_tree_ignore_patterns=(
-    '.git'
-    'node_modules'
-    '.kiro-server'
-    '.cursor-server'
-    '.vscode-server'
-    '.cache'
-    'buildx'
+    eza_tree_ignore_patterns=(
+        '.git'
+        'node_modules'
+        '.kiro-server'
+        '.cursor-server'
+        '.vscode-server'
+        '.cache'
+        'buildx'
+    )
+
+    join "${eza_tree_ignore_patterns[@]}"
 )
-
-export EZA_TREE_IGNORE_GLOB="$(join "${eza_tree_ignore_patterns[@]}")"
-unset join eza_tree_ignore_pattern
 # /Configure eza
 
 # Enable programmable completion features (you don't need to enable
