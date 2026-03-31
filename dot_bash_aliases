@@ -1,4 +1,5 @@
 alias '?'='type -a'
 alias l='eza --icons=always --all --long --group-directories-last --binary --smart-group --header --octal-permissions --no-time'
+alias tree='eza --tree --all --group-directories-last --ignore-glob "${EZA_TREE_IGNORE_GLOB}"'
 alias grep='rg --color=auto'
 alias dash='gh dash'
