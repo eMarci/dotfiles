@@ -9,6 +9,10 @@ customCommands:
       shell: true
       attach: true
       command: 'docker logs {{ "{{ .Container.ID }}" }} 2>&1 | fzf --ansi'
+    - name: manage networks
+      shell: true
+      attach: true
+      command: '{{ .chezmoi.homeDir }}/.config/lazydocker/manage-networks.bash "{{ "{{ .Container.Name }}" }}"'
   images:
     - name: inspect
       shell: true
@@ -19,3 +23,9 @@ customCommands:
       shell: true
       attach: true
       command: 'docker run --rm -it -v "{{ "{{ .Volume.Name }}:/data" }}" martonendredi/nnn-explorer:latest -dHiU /data'
+  networks:
+    - name: attach container
+      shell: true
+      attach: true
+      command: >
+        docker network connect "{{ "{{ .Network.Name }}" }}" "$(docker ps --all --format json | jq -r -s 'map(select(.Networks | split(",") | index("test") | not)) | .[] | [.Names, .Image, .ID] | @tsv' | column -t -s $'\t' | fzf --preview 'docker container inspect {1} | jq --color-output ".[]"' --preview-window=up --accept-nth=1 --bind 'ctrl-alt-j:preview-down' --bind 'ctrl-alt-k:preview-up')"
