@@ -9,10 +9,6 @@ customCommands:
       shell: true
       attach: true
       command: 'docker logs {{ "{{ .Container.ID }}" }} 2>&1 | fzf --ansi'
-    - name: manage networks
-      shell: true
-      attach: true
-      command: '{{ .chezmoi.homeDir }}/.config/lazydocker/manage-networks.bash "{{ "{{ .Container.Name }}" }}"'
   images:
     - name: inspect
       shell: true
