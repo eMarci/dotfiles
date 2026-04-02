@@ -1,2 +1,2 @@
-"\C-l": clear-display
-"\e\C-l":
+"\C-l": clear-screen
+"\e\C-l": clear-display
