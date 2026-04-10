@@ -51,6 +51,7 @@ eval "$(~/.local/bin/rg --generate=complete-bash)"
 
 # Configure fzf
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git" --no-ignore-vcs'
+export FZF_DEFAULT_OPTS='--tmux'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}'"
