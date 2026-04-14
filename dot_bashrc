@@ -71,6 +71,12 @@ eval "$(~/.local/bin/starship completions bash)"
 # Configure GitHub CLI
 eval "$(~/.local/bin/gh completion -s bash)"
 
+if ! ~/.local/bin/gh auth status >/dev/null 2>&1; then
+    ~/.local/bin/gh auth login --git-protocol ssh --skip-ssh-key \
+    && ~/.local/bin/gh extension install dlvhdr/gh-dash
+fi
+# /Configure GitHub CLI
+
 # Configure eza
 export EZA_TREE_IGNORE_GLOB=$(
     join() {

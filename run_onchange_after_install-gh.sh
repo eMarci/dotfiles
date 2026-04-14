@@ -21,14 +21,3 @@ rm -rf "${TEMP_WORKDIR}"
 
 echo "Installed binary and man pages"
 echo
-
-# Start authentication
-
-gh auth login --git-protocol ssh --skip-ssh-key
-
-# Install extensions
-
-# Install dlvhdr/gh-dash
-# https://github.com/dlvhdr/gh-dash
-
-gh extension install dlvhdr/gh-dash
