@@ -63,8 +63,6 @@ only_detached = true
 [palettes.nord]
 color_status_success    = "#343945"
 color_status_fail       = "#A5545B"
-color_exit              = "#BF616A"
-color_exit_text         = "#06090D"
 color_user              = "#4C566A"
 color_dir               = "#5E81AC"
 color_dir_text          = "#03060B"
