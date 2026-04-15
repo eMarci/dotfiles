@@ -6,8 +6,20 @@ colorscheme nord
 highlight Normal guibg=NONE ctermbg=NONE
 highlight NonText guifg=#6e7681 ctermfg=grey
 highlight EndOfBuffer guifg=#6e7681 ctermfg=grey
-
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
+set noshowmode
+set noruler
+set cursorline
 set number
+
+highlight ExtraWhitespace guibg=#bf616a
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 set shiftwidth=4
 set softtabstop=4
 set expandtab
