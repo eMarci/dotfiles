@@ -23,7 +23,7 @@ $git_commit\
 format = '[]($style bg:none)[\($status\) ]($style fg:#ECEFF4)[]($style bg:color_user)'
 success_symbol = " "
 success_style = "fg:color_status_success bg:color_status_success"
-failure_style = "fg:color_status_fail bg:color_status_fail"
+failure_style = "fg:color_status_fail bold bg:color_status_fail"
 disabled = false
 
 [username]
