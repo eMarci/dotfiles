@@ -52,6 +52,13 @@ eval "$(~/.local/bin/rg --generate=complete-bash)"
 # Configure fzf
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git" --no-ignore-vcs'
 export FZF_DEFAULT_OPTS='--tmux'
+ # Nord color theme
+export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}
+    --color=fg:#e5e9f0,bg:#2e3440,hl:#81a1c1
+    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+    --color=info:#ebcb8b,prompt:#bf616a,pointer:#b48ead
+    --color=marker:#a3be8c,spinner:#b48ead,header:#a3be8c
+    --color=gutter:#2e3440"
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}'"
