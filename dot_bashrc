@@ -5,6 +5,17 @@ if [[ $- != *i* ]]; then
     return
 fi
 
+if [[ -z $TMUX && -z $SKIP_TMUX ]]; then
+    SESSION_NAME='main'
+
+    if [[ -n $WT_SESSION ]]; then
+        # We're in Windows Terminal
+        SESSION_NAME="wt-${WT_SESSION:0:8}"
+    fi
+
+    command -v tmux >/dev/null 2>&1 && exec tmux new -A -s "${SESSION_NAME}"
+fi
+
 # Don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
