@@ -61,8 +61,8 @@ only_detached = true
 
 # Nord (calm nordic)
 [palettes.nord]
-color_status_success    = "#343945"
-color_status_fail       = "#A5545B"
+color_status_success    = "#3B4252"
+color_status_fail       = "#BF616A"
 color_user              = "#4C566A"
 color_dir               = "#5E81AC"
 color_dir_text          = "#03060B"
