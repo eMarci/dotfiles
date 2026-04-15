@@ -17,7 +17,7 @@ echo "Installing tmux/tmux ..."
 curl -o "${TEMP_WORKDIR}/out.tar.gz" -L "${DOWNLOAD_URL?}"
 tar xf "${TEMP_WORKDIR}/out.tar.gz" -C ~/.local/bin
 rm -rf "${TEMP_WORKDIR}"
-curl -o ~/.local/share/man/man1 -L "${MAN_PAGE_DOWNLOAD_URL?}"
+curl -o ~/.local/share/man/man1/tmux.1 -L "${MAN_PAGE_DOWNLOAD_URL?}"
 
 echo "Installed binary and man page"
 echo
