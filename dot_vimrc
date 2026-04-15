@@ -2,8 +2,7 @@ source ~/.vim/vim-plug-settings.vim
 
 set termguicolors
 
-set background=dark
-colorscheme ghdark
+colorscheme nord
 highlight Normal guibg=NONE ctermbg=NONE
 highlight NonText guifg=#6e7681 ctermfg=grey
 highlight EndOfBuffer guifg=#6e7681 ctermfg=grey

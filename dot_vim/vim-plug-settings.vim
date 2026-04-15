@@ -5,6 +5,7 @@ endif
 
 call plug#begin()
 
-Plug 'wojciechkepka/vim-github-dark'
+Plug 'nordtheme/vim'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
