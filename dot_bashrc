@@ -5,6 +5,12 @@ if [[ $- != *i* ]]; then
     return
 fi
 
+NON_TMUX_TERMS_PATTERN='^(vscode)$'
+
+if [[ -z $SKIP_TMUX && $TERM_PROGRAM =~ $NON_TMUX_TERMS_PATTERN ]]; then
+    SKIP_TMUX=yes
+fi
+
 if [[ -z $TMUX && -z $SKIP_TMUX ]]; then
     SESSION_NAME='main'
 
