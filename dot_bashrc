@@ -59,7 +59,22 @@ fi
 # Exports
 export EDITOR='vim'
 export VISUAL='vim'
-export PAGER='less --use-color -R'
+export PAGER='less -R --use-color'
+
+# Configure man and less
+export LESS_TERMCAP_mb=$'\e[1;38;2;235;203;139m'
+export LESS_TERMCAP_md=$'\e[1;38;2;136;192;208m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[38;2;46;52;64;48;2;136;192;208m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[4;38;2;94;129;172m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_mr=$'\e[7m'
+export LESS_TERMCAP_mh=$'\e[2m'
+
+export MANPAGER='less -R --use-color'
+export GROFF_NO_SGR=1
+# /Configure man and less
 
 # Configure bat
 eval "$(~/.local/bin/bat --completion bash)"
