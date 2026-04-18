@@ -1,17 +1,21 @@
-shopt -s nullglob globstar histappend checkwinsize
+if [[ -d $HOME/.local/bin ]]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # If not running interactively, don't do anything
 if [[ $- != *i* ]]; then
     return
 fi
 
+shopt -s nullglob globstar histappend checkwinsize
+
 NON_TMUX_TERMS_PATTERN='^(vscode)$'
 
-if [[ -z $SKIP_TMUX && $TERM_PROGRAM =~ $NON_TMUX_TERMS_PATTERN ]]; then
+if [[ $TERM_PROGRAM =~ $NON_TMUX_TERMS_PATTERN ]]; then
     SKIP_TMUX=yes
 fi
 
-if [[ -z $TMUX && -z $SKIP_TMUX ]]; then
+if [[ -t 1 && -z $TMUX && -z $SKIP_TMUX ]]; then
     SESSION_NAME='main'
 
     if [[ -n $WT_SESSION ]]; then
