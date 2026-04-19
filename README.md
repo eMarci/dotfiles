@@ -12,16 +12,10 @@ and the binaries themselves all live in this directory.
 
 This code block contains everything you need to install these dotfiles:
 
-### Prerequisites
-
-- You have `$HOME/.local/bin` in your `PATH` environment variable
-
 ### Script
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin \
-    && chezmoi init https://github.com/eMarci/dotfiles.git \
-    && chezmoi apply
+curl -L https://raw.githubusercontent.com/eMarci/dotfiles/refs/heads/main/install.sh | bash && exec bash
 ```
 
 ### Caveats
