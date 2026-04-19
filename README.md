@@ -43,9 +43,22 @@ simply because I like to have control over what exactly gets installed (unless I
 I also put all of my user-specific installations in `~/.local/`. That means that all completions, man pages,
 and the binaries themselves all live in this directory.
 
-This code block contains everything you need to install these dotfiles:
+This repository is built mainly around my daily usage of Ubuntu (24.04 LTS) in WSL, so expect some installation
+issues on other systems.
 
-### Script
+The install scripts don't rely on any package manager, but they do rely on other tools, listed below:
+
+- curl
+- sh
+- git
+- tar
+- bash
+- vim (since we're not installing it manually, it is expected to be installed on the system)
+
+Most of these tools will be available by default on a modern Ubuntu release.
+In the case of minimized environments, such as a container, you will probably need to install some of these via a package manager.
+
+### Installer script
 
 ```bash
 curl -L https://raw.githubusercontent.com/eMarci/dotfiles/refs/heads/main/install.sh | bash && exec bash
