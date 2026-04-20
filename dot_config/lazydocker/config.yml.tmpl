@@ -9,6 +9,10 @@ customCommands:
       shell: true
       attach: true
       command: 'docker logs {{ "{{ .Container.ID }}" }} 2>&1 | fzf --ansi'
+    - name: commit
+      shell: true
+      attach: false
+      command: 'docker commit {{ "{{ .Container.ID  }}" }} "{{ "{{ .Container.Name  }}:{{ now | date \"2006-01-02_15-04-05\" }}" }}"'
   images:
     - name: inspect
       shell: true
