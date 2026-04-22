@@ -17,7 +17,7 @@ customCommands:
     - name: inspect
       shell: true
       attach: true
-      command: 'docker inspect {{ "{{ .Image.ID }}" }} | $PAGER'
+      command: 'docker inspect {{ "{{ .Image.ID }}" }} | bat --language json'
   volumes:
     - name: browse content
       shell: true
