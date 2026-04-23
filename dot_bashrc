@@ -155,3 +155,5 @@ if ! shopt -oq posix; then
         [[ -r $F ]] && source "$F"
     done
 fi
+
+umask 0022
