@@ -5,7 +5,7 @@
 
 set -e
 
-DOWNLOAD_URL="https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_linux_amd64.tar.gz"
+DOWNLOAD_URL="https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_linux_amd64.tar.gz"
 
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
