@@ -5,8 +5,8 @@
 
 set -e
 
-DOWNLOAD_URL="https://github.com/tmux/tmux-builds/releases/download/v3.6a/tmux-3.6a-linux-x86_64.tar.gz"
-MAN_PAGE_DOWNLOAD_URL="https://raw.githubusercontent.com/tmux/tmux/refs/tags/3.6a/tmux.1"
+DOWNLOAD_URL="https://github.com/tmux/tmux-builds/releases/download/v3.7b/tmux-3.7b-linux-x86_64.tar.gz"
+MAN_PAGE_DOWNLOAD_URL="https://raw.githubusercontent.com/tmux/tmux/refs/tags/3.7b/tmux.1"
 
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
