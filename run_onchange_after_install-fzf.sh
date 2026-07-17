@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install junegunn/fzf
-# https://github.com/funegunn/fzf
+# https://github.com/junegunn/fzf
 
 set -e
 
