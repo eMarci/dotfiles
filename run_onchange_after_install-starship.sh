@@ -5,7 +5,7 @@
 
 set -e
 
-DOWNLOAD_URL="https://github.com/starship/starship/releases/download/v1.24.2/starship-x86_64-unknown-linux-musl.tar.gz"
+DOWNLOAD_URL="https://github.com/starship/starship/releases/download/v1.26.0/starship-x86_64-unknown-linux-musl.tar.gz"
 
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
