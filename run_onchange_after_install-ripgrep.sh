@@ -5,7 +5,7 @@
 
 set -e
 
-DOWNLOAD_URL="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz"
+DOWNLOAD_URL="https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz"
 
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
