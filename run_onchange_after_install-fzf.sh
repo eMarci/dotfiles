@@ -5,8 +5,8 @@
 
 set -e
 
-DOWNLOAD_URL="https://github.com/junegunn/fzf/releases/download/v0.70.0/fzf-0.70.0-linux_amd64.tar.gz"
-MAN_PAGE_DOWNLOAD_URL="https://raw.githubusercontent.com/junegunn/fzf/refs/tags/v0.70.0/man/man1/fzf.1"
+DOWNLOAD_URL="https://github.com/junegunn/fzf/releases/download/v0.74.0/fzf-0.74.0-linux_amd64.tar.gz"
+MAN_PAGE_DOWNLOAD_URL="https://raw.githubusercontent.com/junegunn/fzf/refs/tags/v0.74.0/man/man1/fzf.1"
 
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
