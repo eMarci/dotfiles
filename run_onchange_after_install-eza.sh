@@ -5,7 +5,7 @@
 
 set -e
 
-DOWNLOAD_URL="https://github.com/eza-community/eza/releases/download/v0.23.4/eza_x86_64-unknown-linux-musl.tar.gz"
+DOWNLOAD_URL="https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-musl.tar.gz"
 
 # Prepare temporary working directory
 TEMP_WORKDIR=$(mktemp -d)
