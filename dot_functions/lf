@@ -9,5 +9,5 @@ lf() {
         prefix='tmux display-popup -E -w 75% -h 75%'
     fi
 
-    $prefix $cmd
+    $prefix $cmd "$(pwd)"
 }
