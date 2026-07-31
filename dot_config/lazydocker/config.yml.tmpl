@@ -22,7 +22,7 @@ customCommands:
     - name: browse content
       shell: true
       attach: true
-      command: 'docker run --rm -it -v "{{ "{{ .Volume.Name }}:/data" }}" martonendredi/nnn-explorer:latest -dHiU /data'
+      command: 'docker run --rm -it -v "{{ "{{ .Volume.Name }}:/data" }}" martonendredi/nnn-explorer:latest -CdHiU /data'
   networks:
     - name: attach container
       shell: true

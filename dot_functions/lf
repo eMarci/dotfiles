@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 lf() {
-    local cmd='nnn -dHiU'
+    local cmd='nnn -CdHiU'
 
     local prefix=''
     # stdout is a tty, TMUX is not empty (we're in tmux)
