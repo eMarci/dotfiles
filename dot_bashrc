@@ -60,6 +60,7 @@ fi
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less -R --use-color'
+export NERD_FONT=1
 
 # Configure man and less
 export LESS='-J --incsearch'
